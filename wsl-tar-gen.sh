@@ -34,7 +34,7 @@ DISTROS=(
 for ELEMENT in "${DISTROS[@]}"; do
     docker run -t "$ELEMENT" sh -c echo
     containerID=$(docker container ls -a | grep -i "$ELEMENT" | awk '{print $1}')
-    TAR_NAME=$(echo "$ELEMENT" | tr '/' '_')-$(date -u +%d%m%Y%I%M).tar
+    TAR_NAME=$(echo "$ELEMENT" | tr '/' '_')-rel.tar
     docker export "$containerID" > "$TAR_DIR"/"$TAR_NAME"
     # Remove the docker image to avoid piling up of containers
     docker rm "$containerID"
