@@ -27,30 +27,7 @@ mkdir -p "$TAR_DIR"
 
 # parse desired distro
 DISTROS=(
-    "adelielinux/adelie"
-    "almalinux:latest"
-    "almalinux:minimal"
-    "alpine:latest"
-    "alpine:edge"
-    "amazonlinux:2"
-    "amazonlinux:latest"
-    "archlinux"
-    "archlinux:base-devel"
-    "clearlinux"
-    "debian"
-    "debian:stable-slim"
-    "debian:unstable"
-    "debian:unstable-slim"
-    "fedora"
-    "fedora:rawhide"
-    "gentoo/stage3:latest"
-    "gentoo/stage3:systemd"
-    "kalilinux/kali-rolling"
-    "opensuse/tumbleweed"
-    "rockylinux:9"
-    "rockylinux:9-minimal"
-    "ubuntu"
-    "ubuntu:devel"
+    "rossbannerman/manjaro"
 )
 
 # begin tar generation
