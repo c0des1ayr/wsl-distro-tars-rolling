@@ -25,11 +25,10 @@ jobs:
     - name: Generate tars
       run: |
         docker ps --filter status=exited -q | xargs docker rm || echo "Ignoring docker pruning"
-        git config --global --add safe.directory /__w/wsl-distro-tars/wsl-distro-tars
+        git config --global --add safe.directory /__w/wsl-distro-tars-rolling/wsl-distro-tars-rolling
         bash wsl-tar-gen.sh
     - name: Create Release
       run: |
-        git config --global --add safe.directory /__w/wsl-distro-tars-rolling/wsl-distro-tars-rolling
         gh release create ${{ env.date }} tars/*.tar --generate-notes -t "WDT Release ${{ env.date }}"
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
