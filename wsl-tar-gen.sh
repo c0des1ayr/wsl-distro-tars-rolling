@@ -27,7 +27,7 @@ mkdir -p "$TAR_DIR"
 
 # parse desired distro
 DISTROS=(
-    "rossbannerman/manjaro"
+    "jonathonf/manjaro"
 )
 
 # begin tar generation
